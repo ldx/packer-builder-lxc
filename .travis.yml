@@ -1,0 +1,17 @@
+language: go
+branches:
+  except:
+  - "/^[0-9]/"
+after_success:
+- git tag "$TRAVIS_BUILD_NUMBER"
+deploy:
+  provider: releases
+  file: "$ARTIFACT"
+  api-key: "$API_KEY"
+  skip_cleanup: true
+  on:
+    tags: true
+env:
+  global:
+  - ARTIFACT=packer-builder-lxc
+  - secure: YwcKGzp3TfHiZFFcZAemLXwZgQCKswF6K6kr2uzzOn2o6+FkcQxaAJ5HRfXiWUNtpng9dcwrNP2LmnRuF1XIeb7JlHaijB0oDiZGkluffh2PaDvPU/9hAkCuEXRjdRWYl6Ki/shS1tivHa+Kscm5QFNG3Fcvu+W2gAfN3/769y4=
