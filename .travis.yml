@@ -11,5 +11,6 @@ deploy:
   api-key: "$API_KEY"
   skip_cleanup: true
 env:
-  - ARTIFACT=packer-builder-lxc
-  - secure: YwcKGzp3TfHiZFFcZAemLXwZgQCKswF6K6kr2uzzOn2o6+FkcQxaAJ5HRfXiWUNtpng9dcwrNP2LmnRuF1XIeb7JlHaijB0oDiZGkluffh2PaDvPU/9hAkCuEXRjdRWYl6Ki/shS1tivHa+Kscm5QFNG3Fcvu+W2gAfN3/769y4=
+  global:
+    - ARTIFACT=packer-builder-lxc
+    - secure: YwcKGzp3TfHiZFFcZAemLXwZgQCKswF6K6kr2uzzOn2o6+FkcQxaAJ5HRfXiWUNtpng9dcwrNP2LmnRuF1XIeb7JlHaijB0oDiZGkluffh2PaDvPU/9hAkCuEXRjdRWYl6Ki/shS1tivHa+Kscm5QFNG3Fcvu+W2gAfN3/769y4=
